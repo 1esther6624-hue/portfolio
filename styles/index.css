@@ -57,6 +57,27 @@ main #hero .hero_title .name span:nth-child(1)::after {
 }
 main #hero .hero_title .main_title {
     width: 80%;
+    display: flex;
+    align-items: flex-end;
+}
+main #hero .hero_title .main_title::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 75px;
+    background-color: #fff;
+    margin-left: -8px;
+    animation: cursorBlink 1s steps(1) infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
 }
 main #hero .hero_title .main_title img {width: 80%;}
 
