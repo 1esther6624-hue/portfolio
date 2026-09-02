@@ -4,4 +4,10 @@
     --color-point: #6CFFB5;
     --font-light: #fff;
     --font-dark: #000;
+
+    --font-point: 'Mona12', sans-serif;
+    --font-main: 'Pretendard', sans-serif;
+
+    --font-size-m: 1.25rem; /* 20px */
+    --font-size-sm: 1.125rem; /* 18px */
 }

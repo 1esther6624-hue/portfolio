@@ -15,18 +15,81 @@ header nav ul {
     display: flex; justify-content: flex-end;
     align-items: center;
     gap: 30px;
+    margin: 0 90px;
 }
 header nav ul li {}
-header nav ul li a {}
+header nav ul li a {
+    font-family: var(--font-point);
+    font-weight: 100;
+    font-size: 1.375rem;
+}
 
 /* ========================================== main */
 main {}
 main #hero {
     width: 100%; height: 100vh;
+    position: relative;
 }
-main #hero .hero_title {}
-main #hero .hero_title .year {}
-main #hero .hero_title .year .name {}
-main #hero .hero_title .year .name span {}
-main #hero .hero_title .year .main_title {}
-main #hero .hero_title .year .main_title img {width: 100%;}
+main #hero .hero_title {
+    position: absolute;
+    bottom: 140px;
+    margin: 0 90px ;
+}
+main #hero .hero_title .year {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-bottom: 8px;
+}
+main #hero .hero_title .name {
+    font-size: 3.125rem;
+    margin-bottom: 35px;
+}
+main #hero .hero_title .name span {
+    font-weight: 100;
+}
+main #hero .hero_title .name span:nth-child(1)::after {
+    content: '';
+    display: inline-block;
+    width: 128px;
+    height: 8px;
+    background-color: var(--color-point);
+    margin: 0 20px;
+}
+main #hero .hero_title .main_title {
+    width: 80%;
+}
+main #hero .hero_title .main_title img {width: 80%;}
+
+/* ===================================================== 자기소개 시작 */
+main #resume {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 90px 60px 90px;
+}
+main #resume .sub_title {
+    font-size: var(--font-size-m);
+    font-family: var(--font-point);
+    position: relative;
+}
+main #resume .sub_title::after {
+    content: ''; display: inline-block;
+    width: 7px; height: 7px;
+    background-color: var(--color-point);
+    position: absolute; top: 8px;
+    margin-left: 3px; 
+}
+main #resume #resume_contents {}
+/* ------------------------------왼쪽 내용 1행 */
+main #resume #resume_contents .philosophy {}
+main #resume #resume_contents .philosophy > .p {}
+main #resume #resume_contents .philosophy > .p .span {}
+/* ------------------------------왼쪽 내용 2행 */
+main #resume #resume_contents #resume_left2 {}
+main #resume #resume_contents #resume_left2 .profile {}
+main #resume #resume_contents #resume_left2 .profile .profile_content {}
+main #resume #resume_contents #resume_left2 .profile .profile_content .name {}
+main #resume #resume_contents #resume_left2 .profile .profile_content .birth {}
+/* 학력 */

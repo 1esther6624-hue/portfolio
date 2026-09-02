@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>김태희 PORTFOLIO | 2026</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MonadABXY/mona-font/web/mona.css">
+    <title>PORTFOLIO | 2026 김태희</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MonadABXY/mona-font/web/mona.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/var.css">
     <link rel="stylesheet" href="./styles/pf_main.css">
+    <!-- ------------------ 스와이퍼 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- -------------------- js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/pf_main.js"></script>
 </head>
 <body>
@@ -39,7 +45,109 @@
 
         <!-- 자기소개 시작 -->
         <section id="resume">
-
+            <div id="resume_contents">
+                <!-- -------------------------- 왼쪽 내용 1행 -->
+                <div class="philosophy">
+                    <p class="sub_title">Design Philosophy</p>
+                    <div class="philosophy_content">
+                        <p>보기 좋은 디자인을 넘어,<br><span>사용하기 좋은 경험</span>을 고민합니다.</p>
+                    </div>
+                </div>
+                <!-- -------------------------- 왼쪽 내용 2행 -->
+                <div id="resume_left2">
+                    <div class="profile">
+                        <p class="sub_title">Profile</p>
+                        <div class="profile_content">
+                            <div class="name">
+                                <p>김태희</p>
+                                <p>KIM TAEHEE</p>
+                            </div>
+                            <p class="birth">2006.06.24</p>
+                        </div>
+                    </div>
+                    <!-- 학력 -->
+                    <div class="education">
+                        <p class="sub_title">Education</p>
+                        <dl class="education_content">
+                            <div>
+                                <dt>2026.04 - 2026.10</dt>
+                                <dd>UI/UX 프론트엔드 웹디자인&웹퍼블리셔 양성과정 수료</dd>
+                            </div>
+                            <div>
+                                <dt>2025.03 - 현재</dt>
+                                <dd>
+                                    계원예술대학교<br>
+                                    디지털미디어디자인과 (휴학)
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>2022.03 - 2025.02</dt>
+                                <dd>광휘고등학교 졸업</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <!-- -------------------------- 왼쪽 내용 3행 -->
+                <div id="resume_left3">
+                    <div class="contact">
+                        <p class="sub_title">Contact</p>
+                        <dl class="contact_content">
+                            <div>
+                                <dt>Mobile</dt>
+                                <dd>010-5236-8978</dd>
+                            </div>
+                            <div>
+                                <dt>E-mail</dt>
+                                <dd>1esther6624@gmail.com</dd>
+                            </div>
+                            <div>
+                                <dt>Git-hub</dt>
+                                <dd>https://github.com/1esther6624-hue</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- --------------------- 툴 -->
+                    <div class="skills">
+                        <p class="sub_title">Skills</p>
+                        <div class="skills_content">
+                            <div class="skills_top">
+                                <!-- 디자인 -->
+                                <div class="skill_group">
+                                    <p class="skill_title">Design</p>
+                                    <div class="skill_icon">
+                                        <img src="./images/figma.png" alt="Figma">
+                                        <img src="./images/photoshop.png" alt="Photoshop">
+                                        <img src="./images/illustrator.png" alt="Illustrator">
+                                    </div>
+                                </div>
+                                <!-- 3D Video -->
+                                <div class="skill_group">
+                                    <p class="skill_title">3D · Video</p>
+                                    <div class="skill_icon">
+                                        <img src="./images/premiere.png" alt="Premiere Pro">
+                                        <img src="./images/blender.png" alt="Blender">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 아래쪽 Web publishing  -->
+                            <div class="skill_group">
+                                <p class="skill_title">Web publishing</p>
+                                <div class="skill_icon">
+                                    <img src="./images/css.png" alt="CSS">
+                                    <img src="./images/html.png" alt="HTML">
+                                    <img src="./images/javascript.png" alt="JavaScript">
+                                    <img src="./images/github.png" alt="GitHub">
+                                    <img src="./images/cafe24.png" alt="Cafe24">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- e : 왼쪽 내용 3행 끝 -->
+            </div><!-- e : resume_contents 끝 -->
+            <!-- --------------------오른쪽 증명사진 -->
+            <div id="resume_photo">
+                <p class="my_photo"><img src="#" alt="증명사진"></p>
+            </div>
         </section><!-- e : 자기소개 끝 -->
 
         <!-- 프로젝트 시작 -->
