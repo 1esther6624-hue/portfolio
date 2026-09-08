@@ -8,6 +8,22 @@
     --font-point: 'Mona12', sans-serif;
     --font-main: 'Pretendard', sans-serif;
 
+    --font-size-s: 0.813rem; /* 13px */
+    --font-size-sm: 1.063rem; /* 17px */
     --font-size-m: 1.25rem; /* 20px */
-    --font-size-sm: 1.125rem; /* 18px */
+}
+
+.flex-row {
+    display: flex; flex-flow: row nowrap;
+}
+.flex-row-between {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+}
+.flex-col {
+    display: flex; flex-flow: column nowrap;
+}
+.flex-col-between {
+    display: flex; flex-flow: column nowrap;
+    justify-content: space-between; align-items: center;
 }

@@ -8,6 +8,7 @@
     <title>PORTFOLIO | 2026 김태희</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MonadABXY/mona-font/web/mona.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/var.css">
     <link rel="stylesheet" href="./styles/index.css">
@@ -31,7 +32,7 @@
         </nav>
     </header>
     <main>
-        <!-- 히어로 시작 -->
+        <!-- ---------------------------히어로 시작 -->
         <section id="hero">
             <div class="hero_title">
                 <p class="year">2026</p>
@@ -43,11 +44,11 @@
             </div>
         </section><!-- e : 히어로 끝 -->
 
-        <!-- 자기소개 시작 -->
+        <!-- ---------------------------자기소개 시작 -->
         <section id="resume">
-            <div id="resume_contents">
+            <div id="resume_contents"> 
                 <!-- -------------------------- 왼쪽 내용 1행 -->
-                <div class="philosophy">
+                <div class="philosophy flex-col">
                     <p class="sub_title">Design Philosophy</p>
                     <div class="philosophy_content">
                         <p>보기 좋은 디자인을 넘어,<br><span>사용하기 좋은 경험</span>을 고민합니다.</p>
@@ -55,7 +56,7 @@
                 </div>
                 <!-- -------------------------- 왼쪽 내용 2행 -->
                 <div id="resume_left2">
-                    <div class="profile">
+                    <div class="profile flex-col">
                         <p class="sub_title">Profile</p>
                         <div class="profile_content">
                             <div class="name">
@@ -66,9 +67,9 @@
                         </div>
                     </div>
                     <!-- 학력 -->
-                    <div class="education">
+                    <div class="education flex-col">
                         <p class="sub_title">Education</p>
-                        <dl class="education_content">
+                        <dl class="education_content flex-col">
                             <div>
                                 <dt>2026.04 - 2026.10</dt>
                                 <dd>UI/UX 프론트엔드 웹디자인&웹퍼블리셔 양성과정 수료</dd>
@@ -89,9 +90,9 @@
                 </div>
                 <!-- -------------------------- 왼쪽 내용 3행 -->
                 <div id="resume_left3">
-                    <div class="contact">
+                    <div class="contact flex-col">
                         <p class="sub_title">Contact</p>
-                        <dl class="contact_content">
+                        <dl class="contact_content flex-col">
                             <div>
                                 <dt>Mobile</dt>
                                 <dd>010-5236-8978</dd>
@@ -107,9 +108,9 @@
                         </dl>
                     </div>
                     <!-- --------------------- 툴 -->
-                    <div class="skills">
+                    <div class="skills flex-col">
                         <p class="sub_title">Skills</p>
-                        <div class="skills_content">
+                        <div class="skills_content flex-col">
                             <div class="skills_top">
                                 <!-- 디자인 -->
                                 <div class="skill_group">
@@ -150,9 +151,62 @@
             </div>
         </section><!-- e : 자기소개 끝 -->
 
-        <!-- 프로젝트 시작 -->
+        <!-- ---------------------------목차시작 -->
         <section id="project">
+        </section><!-- e : 목차 끝 -->
 
+        <!-- ---------------------------프로젝트 시작 -->
+        <section id="project">
+            <div class="project_bg"></div>
+            <div class="project_contents">
+                <!-- 왼쪽 프로젝트 정보 -->
+                <div class="project_info flex-col">
+                    <p class="project_category">01 Web project</p>
+                    <div class="project_title">
+                        <h2>프로젝트이름 영어로 (또는 로고)</h2>
+                        <p>프로젝트이름 한글로</p>
+                    </div>
+                    <dl class="project_detail flex-col">
+                        <div>
+                            <dt>Period</dt>
+                            <dd>26.00.00 - 26.00.00</dd>
+                        </div>
+                        <div>
+                            <dt>Contribution</dt>
+                            <dd>개인작업 100%</dd>
+                        </div>
+                        <div>
+                            <dt>Tools</dt>
+                            <dd>figma / photoshop / html / css / js</dd>
+                        </div>
+                    </dl>
+                    <p class="project_desc">
+                        프로젝트설명프로젝트설명프로젝트설명프로젝트설명프로젝트<br>
+                    </p>
+                    <div class="project_links">
+                        <a href="#">
+                            <img src="./images/github.png" alt="GitHub">
+                            <span>원본사이트</span>
+                        </a>
+                        <a href="#">
+                            <img src="./images/github.png" alt="GitHub">
+                            <span>프로젝트 기획서</span>
+                        </a>
+                        <a href="#">
+                            <img src="./images/figma.png" alt="Figma">
+                            <span>피그마 프로토타입</span>
+                        </a>
+                        <a href="#">
+                            <img src="./images/github.png" alt="GitHub">
+                            <span>웹 프로토타입</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- 오른쪽 프로젝트 이미지 -->
+                <div class="project_image">
+                    <img src="./images/project01.jpg" alt="프로젝트 이미지">
+                </div>
+            </div>
         </section><!-- e : 프로젝트 끝 -->
 
         <!-- 아카이브 시작 -->
