@@ -40,10 +40,10 @@ main #hero .hero_title .year {
     margin-bottom: 8px;
 }
 main #hero .hero_title .name {
-    font-size: 2rem;
     margin-bottom: 35px;
 }
 main #hero .hero_title .name span {
+    font-size: 2rem;
     font-weight: 100;
 }
 main #hero .hero_title .name span:nth-child(1)::after {
@@ -202,13 +202,13 @@ main #project .project_bg {
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url('../images/project_bg.jpg');
+    background-image: url('../images/project1_bg.png');
     background-size: cover;
     background-position: center;
 }
 main #project .project_contents {
     width: 100%; height: 100%;
-    padding: 0 60px;
+    padding: 100px 60px;
     position: relative;
     z-index: 1;
     display: flex;
@@ -262,6 +262,11 @@ main #project .project_contents .project_info .project_detail dt {
 main #project .project_contents .project_info .project_detail dd {
     white-space: nowrap;
 }
+main #project .project_contents .project_info .project_desc {
+    width: 500px; line-height: 150%;
+    font-size: var(--font-size-s);
+    padding: 80px 0 40px 0;
+}
 
 /* 오른쪽 프로젝트 이미지 */
 
@@ -301,3 +306,4 @@ main #project .project_links a:hover {
 main #project .project_links a:hover img {
     transform: scale(1.08);
 }
+/* ===================================================아카이브 시작 */
