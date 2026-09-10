@@ -82,6 +82,8 @@ main #resume {
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
+    margin-top: 70px;
+    margin-bottom: 50px; 
 }
 main #resume .sub_title {
     font-family: var(--font-point);
@@ -91,7 +93,7 @@ main #resume .sub_title::after {/* 포인트 점 */
     content: ''; display: inline-block;
     width: 7px; height: 7px;
     background-color: var(--color-point);
-    position: absolute; top: 8px;
+    position: absolute; top: 6px;
     margin-left: 3px;
 }
 main #resume #resume_contents {
@@ -193,6 +195,9 @@ main #resume #resume_contents #resume_left3 .skills .skill_icon img {
 /* ==================================================== 프로젝트 시작 */
 main #project {
     width: 100%;
+}
+main #project .project_item {
+    width: 100%;
     min-height: 100vh; 
     position: relative;
 }
@@ -202,9 +207,11 @@ main #project .project_bg {
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url('../images/project1_bg.png');
     background-size: cover;
     background-position: center;
+}
+main #project .project_innisfree {
+    background-image: url('../images/project1_bg.png');
 }
 main #project .project_contents {
     width: 100%; height: 100%;
@@ -244,7 +251,7 @@ main #project .project_contents .project_info .project_detail > div > dt::after 
     content: ''; display: inline-block;
     width: 7px; height: 7px;
     background-color: var(--color-point);
-    position: absolute; top: 8px;
+    position: absolute; top: 6px;
     margin-left: 3px;
 }
 main #project .project_contents .project_info .project_detail {
@@ -265,7 +272,7 @@ main #project .project_contents .project_info .project_detail dd {
 main #project .project_contents .project_info .project_desc {
     width: 500px; line-height: 150%;
     font-size: var(--font-size-s);
-    padding: 80px 0 40px 0;
+    padding: 60px 0 30px 0;
 }
 
 /* 오른쪽 프로젝트 이미지 */
@@ -306,4 +313,113 @@ main #project .project_links a:hover {
 main #project .project_links a:hover img {
     transform: scale(1.08);
 }
+main #project .project_links .figma_link {
+    position: relative;
+}
+
+main #project .project_links .figma_link .device_menu {
+    position: absolute; left: 22%; top: 100%; 
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+main #project .project_links .figma_link:hover .device_menu {
+    opacity: 1;
+    visibility: visible;
+}
+main #project .project_links .device_menu a {
+    width: auto; height: auto;
+    padding: 0 0 6px;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    font-size: 0.875rem;
+    position: relative;
+}
+main #project .project_links .device_menu a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+main #project .project_links .device_menu a:hover {
+    background-color: transparent;
+    color: #fff;
+}
+main #project .project_links .device_menu a:hover::after {
+    transform: scaleX(1);
+}
+
 /* ===================================================아카이브 시작 */
+main #archive {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 40px 100px;
+}
+main #archive .archive_title {
+    margin-bottom: 40px;
+}
+main #archive .archive_title p {
+    font-family: var(--font-point);
+}
+main #archive .archive_title p span {
+    position: relative;
+}
+main #archive .archive_title p span::after {/* 포인트점 */
+    content: ''; display: inline-block;
+    width: 7px; height: 7px;
+    background-color: var(--color-point);
+    position: absolute; top: 6px; 
+    margin-left: 3px;
+}
+/* Graphic / Video 각각의 영역 */
+main #archive .archive_category {
+    margin-bottom: 100px;
+}
+main #archive .archive_category h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+/* Click Image */
+main #archive .archive_notice {
+    font-family: var(--font-point);
+    font-size: 0.75rem;
+    text-align: right;
+    margin-bottom: 12px;
+}
+/* Swiper */
+main #archive .archive_swiper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+main #archive .archive_swiper .swiper-slide {
+    height: 500px;
+    overflow: hidden;
+    cursor: pointer;
+}
+main #archive .archive_swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+/* ================= 아래 스크롤바 */
+main #archive .archive_scrollbar {
+    width: 310px;
+    height: 2px;
+    margin: 80px auto 0;
+    background-color: #fff;
+}
+main #archive .archive_scrollbar .swiper-scrollbar-drag {
+    height: 2px;
+    background-color: var(--color-point);
+}

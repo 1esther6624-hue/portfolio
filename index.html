@@ -18,7 +18,7 @@
     <!-- -------------------- js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./scripts/pf_main.js"></script>
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
     <!-- ------------- 헤더 -->
@@ -157,61 +157,164 @@
 
         <!-- ---------------------------프로젝트 시작 -->
         <section id="project">
-            <div class="project_bg"></div>
-            <div class="project_contents">
-                <!-- 왼쪽 프로젝트 정보 -->
-                <div class="project_info flex-col">
-                    <p class="project_category">01 Web project</p>
-                    <div class="project_title">
-                        <h2>프로젝트이름 영어로 (또는 로고)</h2>
-                        <p>프로젝트이름 한글로</p>
+            <!-- 프로젝트이니스프리 -->
+            <div class="project_item">
+                <div class="project_bg project_innisfree"></div>
+
+                <div class="project_contents">
+                    <!-- 왼쪽 프로젝트 정보 -->
+                    <div class="project_info flex-col">
+                        <p class="project_category">01 Web project</p>
+                        <div class="project_title">
+                            <h2>INNISFREE</h2>
+                            <p>이니스프리</p>
+                        </div>
+                        <dl class="project_detail flex-col">
+                            <div>
+                                <dt>Period</dt>
+                                <dd>26.00.00 - 26.00.00</dd>
+                            </div>
+                            <div>
+                                <dt>Contribution</dt>
+                                <dd>개인작업 100%</dd>
+                            </div>
+                            <div>
+                                <dt>Tools</dt>
+                                <dd>figma / photoshop / html / css / js</dd>
+                            </div>
+                        </dl>
+                        <p class="project_desc">
+                            기존 이니스프리의 복잡한 정보 구조를 분석하고, 제품 탐색과 브랜드 경험을 중심으로 리디자인했습니다. 핵심 콘텐츠를 재구성하여 원하는 제품을 직관적으로 탐색할 수 있도록 설계했습니다. 이니스프리의 자연주의 이미지를 유지하면서 브랜드 경험과 커머스의 균형을 강화한 UI/UX를 제안했습니다.<br>
+                        </p>
+                        <div class="project_links">
+                            <a href="https://www.innisfree.com/kr/ko/">
+                                <!-- <img src="" alt="원래사이트"> -->
+                                <span>원본사이트</span>
+                            </a>
+                            <a href="https://www.figma.com/proto/AJXONJHMYrl1yqU0T7nECs/%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=3-8&t=WI5xlsQLTuAiWXB8-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&hide-ui=1">
+                                <img src="./images/file.png" alt="기획서">
+                                <span>프로젝트 기획서</span>
+                            </a>
+                            <div class="figma_link">
+                                <a href="#">
+                                    <img src="./images/figma.png" alt="Figma">
+                                    <span>피그마 프로토타입</span>
+                                </a>
+                                <div class="device_menu">
+                                    <a href="https://www.figma.com/proto/AJXONJHMYrl1yqU0T7nECs/%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=126-50&t=QHPtGVwno8VDGiBQ-0&scaling=scale-down-width&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=126%3A50&hide-ui=1">PC</a>
+                                    <a href="https://www.figma.com/proto/AJXONJHMYrl1yqU0T7nECs/%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=498-639&t=QHPtGVwno8VDGiBQ-0&scaling=scale-down-width&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=498%3A639&hide-ui=1">Tablet</a>
+                                    <a href="https://www.figma.com/proto/AJXONJHMYrl1yqU0T7nECs/%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=498-641&t=QHPtGVwno8VDGiBQ-0&scaling=scale-down-width&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=498%3A641&hide-ui=1">Mobile</a>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <img src="./images/github.png" alt="GitHub">
+                                <span>웹 프로토타입</span>
+                            </a>
+                        </div>
                     </div>
-                    <dl class="project_detail flex-col">
-                        <div>
-                            <dt>Period</dt>
-                            <dd>26.00.00 - 26.00.00</dd>
-                        </div>
-                        <div>
-                            <dt>Contribution</dt>
-                            <dd>개인작업 100%</dd>
-                        </div>
-                        <div>
-                            <dt>Tools</dt>
-                            <dd>figma / photoshop / html / css / js</dd>
-                        </div>
-                    </dl>
-                    <p class="project_desc">
-                        기존 이니스프리의 복잡한 정보 구조를 분석하고, 제품 탐색과 브랜드 경험을 중심으로 리디자인했습니다. 핵심 콘텐츠를 재구성하여 원하는 제품을 직관적으로 탐색할 수 있도록 설계했습니다. 이니스프리의 자연주의 이미지를 유지하면서 브랜드 경험과 커머스의 균형을 강화한 UI/UX를 제안했습니다.<br>
-                    </p>
-                    <div class="project_links">
-                        <a href="https://www.innisfree.com/kr/ko/">
-                            <!-- <img src="" alt="원래사이트"> -->
-                            <span>원본사이트</span>
-                        </a>
-                        <a href="https://www.figma.com/proto/AJXONJHMYrl1yqU0T7nECs/%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=3-8&t=WI5xlsQLTuAiWXB8-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&hide-ui=1">
-                            <img src="./images/file.png" alt="기획서">
-                            <span>프로젝트 기획서</span>
-                        </a>
-                        <a href="https://www.figma.com/proto/AJXONJHMYrl1yqU0T7nECs/%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=126-50&t=WI5xlsQLTuAiWXB8-0&scaling=min-zoom&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=126%3A50&hide-ui=1">
-                            <img src="./images/figma.png" alt="Figma">
-                            <span>피그마 프로토타입</span>
-                        </a>
-                        <a href="#">
-                            <img src="./images/github.png" alt="GitHub">
-                            <span>웹 프로토타입</span>
-                        </a>
+                    <!-- 오른쪽 프로젝트 이미지 -->
+                    <div class="project_image">
+                        <img src="./images/project01.jpg" alt="프로젝트 이미지">
                     </div>
                 </div>
-                <!-- 오른쪽 프로젝트 이미지 -->
-                <div class="project_image">
-                    <img src="./images/project01.jpg" alt="프로젝트 이미지">
+            </div><!-- e: 이니스프리 -->
+            <!-- 프로젝트레고 -->
+            <div class="project_item">
+                <div class="project_bg project_lego"></div>
+
+                <div class="project_contents">
+                    <!-- 왼쪽 프로젝트 정보 -->
+                    <div class="project_info flex-col">
+                        <p class="project_category">02 Web project</p>
+                        <div class="project_title">
+                            <h2>LEGO</h2>
+                            <p>레고</p>
+                        </div>
+                        <dl class="project_detail flex-col">
+                            <div>
+                                <dt>Period</dt>
+                                <dd>26.00.00 - 26.00.00</dd>
+                            </div>
+                            <div>
+                                <dt>Contribution</dt>
+                                <dd>개인작업 100%</dd>
+                            </div>
+                            <div>
+                                <dt>Tools</dt>
+                                <dd>figma / photoshop / html / css / js</dd>
+                            </div>
+                        </dl>
+                        <p class="project_desc">
+                            기존 이니스프리의 복잡한 정보 구조를 분석하고, 제품 탐색과 브랜드 경험을 중심으로 리디자인했습니다. 핵심 콘텐츠를 재구성하여 원하는 제품을 직관적으로 탐색할 수 있도록 설계했습니다. 이니스프리의 자연주의 이미지를 유지하면서 브랜드 경험과 커머스의 균형을 강화한 UI/UX를 제안했습니다.<br>
+                        </p>
+                        <div class="project_links">
+                            <a href="https://www.innisfree.com/kr/ko/">
+                                <!-- <img src="" alt="원래사이트"> -->
+                                <span>원본사이트</span>
+                            </a>
+                            <a href="https://www.figma.com/proto/AJXONJHMYrl1yqU0T7nECs/%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=3-8&t=WI5xlsQLTuAiWXB8-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&hide-ui=1">
+                                <img src="./images/file.png" alt="기획서">
+                                <span>프로젝트 기획서</span>
+                            </a>
+                            <div class="figma_link">
+                                <a href="#">
+                                    <img src="./images/figma.png" alt="Figma">
+                                    <span>피그마 프로토타입</span>
+                                </a>
+                                <div class="device_menu">
+                                    <a href="https://www.figma.com/proto/AJXONJHMYrl1yqU0T7nECs/%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=126-50&t=QHPtGVwno8VDGiBQ-0&scaling=scale-down-width&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=126%3A50&hide-ui=1">PC</a>
+                                    <a href="https://www.figma.com/proto/AJXONJHMYrl1yqU0T7nECs/%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=498-639&t=QHPtGVwno8VDGiBQ-0&scaling=scale-down-width&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=498%3A639&hide-ui=1">Tablet</a>
+                                    <a href="https://www.figma.com/proto/AJXONJHMYrl1yqU0T7nECs/%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?node-id=498-641&t=QHPtGVwno8VDGiBQ-0&scaling=scale-down-width&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=498%3A641&hide-ui=1">Mobile</a>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <img src="./images/github.png" alt="GitHub">
+                                <span>웹 프로토타입</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 오른쪽 프로젝트 이미지 -->
+                    <div class="project_image">
+                        <img src="./images/project01.jpg" alt="프로젝트 이미지">
+                    </div>
                 </div>
-            </div>
+            </div><!-- e: 레고 -->
         </section><!-- e : 프로젝트 끝 -->
 
         <!-- 아카이브 시작 -->
         <section id="archive">
-            
+            <div class="archive_title">
+                <p>Archive<span>!</span></p>
+            </div>
+            <!-- ================= Graphic Design -->
+            <div class="archive_category">
+                <h2>Graphic Design</h2>
+                <p class="archive_notice">Click Image !</p>
+
+                <div class="archive_swiper graphic_swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./images/archive1.jpg" alt="Graphic Design 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/archive2.jpg" alt="Graphic Design 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/archive3.jpg" alt="Graphic Design 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/archive4.jpg" alt="Graphic Design 4">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/archive5.jpg" alt="Graphic Design 5">
+                        </div>
+                    </div>
+                    <div class="archive_prev graphic_prev"></div>
+                    <div class="archive_next graphic_next"></div>
+                </div>
+                <div class="archive_scrollbar graphic_scrollbar"></div>
+            </div><!-- e: 그래픽디자인 끝 -->
+
         </section><!-- e : 아카이브 끝 -->
     </main>
 </body>
