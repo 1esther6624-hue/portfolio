@@ -361,7 +361,7 @@ main #project .project_links .device_menu a:hover::after {
 main #archive {
     width: 100%;
     min-height: 100vh;
-    padding: 60px 40px 100px;
+    padding: 60px 60px 100px;
 }
 main #archive .archive_title {
     margin-bottom: 40px;
@@ -401,25 +401,26 @@ main #archive .archive_swiper {
     position: relative;
     overflow: hidden;
 }
-main #archive .archive_swiper .swiper-slide {
-    height: 500px;
+main #archive .graphic_swiper .swiper-slide {
+    height: 400px;
     overflow: hidden;
-    cursor: pointer;
 }
-main #archive .archive_swiper .swiper-slide img {
+
+main #archive .graphic_swiper .swiper-slide img {
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
+    object-position: top;
+    display: block;
 }
 /* ================= 아래 스크롤바 */
-main #archive .archive_scrollbar {
+main #archive .graphic_scrollbar {
     width: 310px;
     height: 2px;
     margin: 80px auto 0;
     background-color: #fff;
 }
-main #archive .archive_scrollbar .swiper-scrollbar-drag {
+main #archive .graphic_scrollbar  .swiper-scrollbar-drag {
     height: 2px;
     background-color: var(--color-point);
 }

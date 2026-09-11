@@ -1,4 +1,5 @@
 /* 포폴 index */
+
 const archiveSwiper = new Swiper('.archive_swiper', {
     slidesPerView: 5,
     spaceBetween: 10,
@@ -9,12 +10,8 @@ const archiveSwiper = new Swiper('.archive_swiper', {
         delay: 2500,
         disableOnInteraction: false,
     },
-    navigation: {
-        prevEl: '.archive_prev',
-        nextEl: '.archive_next',
-    },
     scrollbar: {
-        el: '.archive_scrollbar',
+        el: '.graphic_scrollbar',
         draggable: true,
     },
 });
