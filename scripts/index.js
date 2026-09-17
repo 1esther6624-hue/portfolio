@@ -60,3 +60,35 @@ const videoSwiper = new Swiper('.video_swiper', {
         draggable: true,
     },
 });
+
+    // ScrollTrigger 플러그인 등록
+    gsap.registerPlugin(ScrollTrigger);
+
+// 자기소개페이지 스크롤트리거
+gsap.to('main #resume #resume_contents .philosophy',{
+    opacity:1,
+    duration:2,
+    scrollTrigger: {
+        trigger: "main #resume #resume_contents .philosophy",
+        start: "top 70%",
+        // markers: true
+    }
+})
+gsap.to('main #resume #resume_contents #resume_left2',{
+    opacity:1,
+    duration:2,
+    scrollTrigger: {
+        trigger: "main #resume #resume_contents #resume_left2",
+        start: "top 70%",
+        // markers: true
+    }
+})
+gsap.to('main #resume #resume_contents #resume_left3',{
+    opacity:1,
+    duration:2,
+    scrollTrigger: {
+        trigger: "main #resume #resume_contents #resume_left3",
+        start: "top 70%",
+        // markers: true
+    }
+})

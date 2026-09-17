@@ -65,7 +65,10 @@ main #hero .hero_title .main_title::after { /* 깜빡이는 효과 */
     background-color: #fff;
     right: -25px;
     bottom: 0;
+
+    opacity: 0;
     animation: cursorBlink 1s steps(1) infinite;
+    animation-delay: 1.9s;
 }
 
 @keyframes cursorBlink {
@@ -73,6 +76,16 @@ main #hero .hero_title .main_title::after { /* 깜빡이는 효과 */
     51%, 100% {opacity: 0;}
 }
 main #hero .hero_title .main_title img {width: 100%;}
+.portfolio_typing {
+    width: 100%;
+    clip-path: inset(0 100% 0 0);
+    animation: portfolioTyping 1.5s steps(10) forwards;
+}
+@keyframes portfolioTyping {
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
 
 /* ===================================================== 자기소개 시작 */
 main #resume {
@@ -102,7 +115,7 @@ main #resume #resume_contents {
 }
 /* ------------------------------왼쪽 내용 1행 */
 main #resume #resume_contents .philosophy {
-    gap: 30px;
+    gap: 30px; opacity: 0;
 }
 main #resume #resume_contents .philosophy_content {
 }
@@ -117,7 +130,7 @@ main #resume #resume_contents .philosophy_content p > span {
 }
 /* ------------------------------왼쪽 내용 2행 */
 main #resume #resume_contents #resume_left2 {
-    display: flex;
+    display: flex; opacity: 0;
 }
 main #resume #resume_contents #resume_left2 .profile {
     gap: 30px;
@@ -151,7 +164,7 @@ main #resume #resume_contents #resume_left2 .education .education_content dd {
 }
 /* ----------------------------왼쪽 내용 3행 */
 main #resume #resume_contents #resume_left3 {
-    display: flex;
+    display: flex; opacity: 0;
 }
 /* Contact */
 main #resume #resume_contents #resume_left3 .contact {
