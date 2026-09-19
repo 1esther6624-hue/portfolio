@@ -5,7 +5,7 @@ body {
 }
 /* ============================= header */
 header {
-    width: 100%; padding: 20px 0;
+    width: 100%; padding: 30px 0;
     position: fixed; left: 0; top: 0;
     z-index: 100;
 }
@@ -20,11 +20,19 @@ header nav ul {
 header nav ul li {}
 header nav ul li a {
     font-family: var(--font-point);
+    font-size: var(--font-size-sm);
     font-weight: 100;   
 }
 
 /* ========================================== main */
-main {}
+main {
+    width: 100%;
+    height: 100vh;
+}
+main .swiper-slide {
+    width: 100%;
+    height: 100vh;
+}
 main #hero {
     width: 100%; height: 100vh;
     position: relative;
@@ -35,15 +43,15 @@ main #hero .hero_title {
     margin: 0 60px ;
 }
 main #hero .hero_title .year {
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-weight: 100;
     margin-bottom: 8px;
 }
 main #hero .hero_title .name {
-    margin-bottom: 35px;
+    margin-bottom: 60px;
 }
 main #hero .hero_title .name span {
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: 100;
 }
 main #hero .hero_title .name span:nth-child(1)::after {
@@ -61,9 +69,9 @@ main #hero .hero_title .main_title {
 main #hero .hero_title .main_title::after { /* 깜빡이는 효과 */
     content: ''; display: block;
     position: absolute;
-    width: 30px; height: 155px;
+    width: 50px; height: 155px;
     background-color: #fff;
-    right: -25px;
+    right: -48px;
     bottom: 0;
 
     opacity: 0;
@@ -90,13 +98,11 @@ main #hero .hero_title .main_title img {width: 100%;}
 /* ===================================================== 자기소개 시작 */
 main #resume {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
-    margin-top: 70px;
-    margin-bottom: 50px; 
 }
 main #resume .sub_title {
     font-family: var(--font-point);
@@ -106,8 +112,8 @@ main #resume .sub_title::after {/* 포인트 점 */
     content: ''; display: inline-block;
     width: 7px; height: 7px;
     background-color: var(--color-point);
-    position: absolute; top: 6px;
-    margin-left: 3px;
+    position: absolute; top: 10px;
+    margin-left: 4px;
 }
 main #resume #resume_contents {
     display: flex; flex-flow: column nowrap;
@@ -122,6 +128,7 @@ main #resume #resume_contents .philosophy_content {
 main #resume #resume_contents .philosophy_content p {
     font-size: 2.188rem;
     font-weight: 100;
+    line-height: 120%;
 }
 main #resume #resume_contents .philosophy_content p > span {
     color: var(--color-point);
@@ -141,11 +148,12 @@ main #resume #resume_contents #resume_left2 .profile .profile_content .name {
     display: flex; gap: 13px; padding-bottom: 5px;
 }
 main #resume #resume_contents #resume_left2 .profile .profile_content .name p {
-    font-size: var(--font-size-sm);
+    font-size: 1.438rem;
     font-weight: 400;
+    margin-bottom: 5px;
 }
 main #resume #resume_contents #resume_left2 .profile .profile_content .birth {
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-m);
 }
 /* 학력 */
 main #resume #resume_contents #resume_left2 .education {
@@ -156,11 +164,13 @@ main #resume #resume_contents #resume_left2 .education .education_content > div 
     display: flex; align-items: flex-start;
 }
 main #resume #resume_contents #resume_left2 .education .education_content dt {
-    width: 130px;
-    font-size: var(--font-size-s);
+    width: 180px;
+    flex-shrink: 0;
+    font-weight: 200;
 }
 main #resume #resume_contents #resume_left2 .education .education_content dd {
     white-space: nowrap;
+    letter-spacing: 5%;
 }
 /* ----------------------------왼쪽 내용 3행 */
 main #resume #resume_contents #resume_left3 {
@@ -174,12 +184,31 @@ main #resume #resume_contents #resume_left3 .contact {
 main #resume #resume_contents #resume_left3 .contact .contact_content {
     gap: 15px; 
 }
+main #resume #resume_contents #resume_left3 .contact .contact_content a {
+    position: relative;
+    display: inline-block;
+}
+main #resume #resume_contents #resume_left3 .contact .contact_content a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+main #resume #resume_contents #resume_left3 .contact .contact_content a:hover::after {
+    transform: scaleX(1);
+}
 main #resume #resume_contents #resume_left3 .contact .contact_content > div {
     display: flex;
 }
+main #resume #resume_contents #resume_left3 .contact .contact_content dd {}
 main #resume #resume_contents #resume_left3 .contact .contact_content dt {
-    width: 70px;
-    font-weight: 500;
+    width: 90px;
+    font-weight: 200;
 }
 
 /* Skills */
@@ -206,15 +235,18 @@ main #resume #resume_contents #resume_left3 .skills .skill_icon img {
     width: 50px; height: 50px; 
 }
 /* ==================================================== 프로젝트 시작 */
-main #project {
+main .project {
     width: 100%;
+    height: 100vh;
 }
-main #project .project_item {
+
+main .project .project_item {
     width: 100%;
-    min-height: 100vh; 
+    height: 100%;
     position: relative;
 }
-main #project .project_bg {
+
+main .project .project_bg {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -222,13 +254,13 @@ main #project .project_bg {
     top: 0;
     background-size: cover;
     background-position: center;
-}
-main #project .project_innisfree {
     background-image: url('../images/project1_bg.png');
 }
-main #project .project_contents {
+main .project .project_innisfree {
+}
+main .project .project_contents {
     width: 100%; height: 100%;
-    padding: 100px 60px;
+    padding: 60px;
     position: relative;
     z-index: 1;
     display: flex;
@@ -237,69 +269,68 @@ main #project .project_contents {
 }
 
 /* 왼쪽 프로젝트 정보 */
-main #project .project_info {
-    width: 50%;
+main .project .project_info {
+    width: 600px;
 }
-main #project .project_info .project_category {
+main .project .project_info .project_category {
     font-family: var(--font-point);
-    font-size: var(--font-size-sm);
     margin-bottom: 30px;
 }
-main #project .project_info .project_title {
+main .project .project_info .project_title {
     margin-bottom: 60px;
 }
-main #project .project_info .project_title h2 {
-    font-size: 2.5rem;
+main .project .project_info .project_title h2 {
+    font-size: 4rem;
     font-weight: 500;
     margin-bottom: 10px;
 }
-main #project .project_info .project_title p {
-    font-size: 1.5rem;
+main .project .project_info .project_title p {
+    font-size: 2rem;
 }
-main #project .project_contents .project_info .project_detail > div > dt {
+main .project .project_contents .project_info .project_detail > div > dt {
     font-family: var(--font-point);
     position: relative;
 }
-main #project .project_contents .project_info .project_detail > div > dt::after {/* 포인트 점 */
+main .project .project_contents .project_info .project_detail > div > dt::after {/* 포인트 점 */
     content: ''; display: inline-block;
     width: 7px; height: 7px;
     background-color: var(--color-point);
-    position: absolute; top: 6px;
+    position: absolute; top: 10px;
     margin-left: 3px;
 }
-main #project .project_contents .project_info .project_detail {
+main .project .project_contents .project_info .project_detail {
     gap: 25px;
 }
-main #project .project_contents .project_info .project_detail > div {
+main .project .project_contents .project_info .project_detail > div {
     display: flex;
     align-items: flex-start;
 }
-main #project .project_contents .project_info .project_detail dt {
-    width: 130px;
+main .project .project_contents .project_info .project_detail dt {
+    width: 180px;
     font-family: var(--font-point);
     position: relative;
 }
-main #project .project_contents .project_info .project_detail dd {
+main .project .project_contents .project_info .project_detail dd {
     white-space: nowrap;
 }
-main #project .project_contents .project_info .project_desc {
-    width: 500px; line-height: 150%;
-    font-size: var(--font-size-s);
-    padding: 60px 0 30px 0;
+main .project .project_contents .project_info .project_desc {
+    width: 600px; line-height: 150%;
+    font-weight: 200;
+    padding: 60px 0 40px 0;
 }
 
 /* 오른쪽 프로젝트 이미지 */
 
 
 /* 버튼 */
-main #project .project_links {
-    width: 510px;
+main .project .project_links {
+    width: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 20px;
 }
-main #project .project_links a {
-    height: 50px;
+main .project .project_links a {
+    height: 60px;
     border: 1px solid var(--color-point);
     border-radius: 8px;
     display: flex;
@@ -312,25 +343,25 @@ main #project .project_links a {
         color 0.3s ease,
         transform 0.3s ease;
 }
-main #project .project_links a span {
+main .project .project_links a span {
     color: inherit;
 }
-main #project .project_links a img {
+main .project .project_links a img {
     width: 40px; height: 40px;
     transition: transform 0.3s ease;
 }
-main #project .project_links a:hover {
+main .project .project_links a:hover {
     background-color: var(--color-point);
     color: #000;
 }
-main #project .project_links a:hover img {
+main .project .project_links a:hover img {
     transform: scale(1.08);
 }
-main #project .project_links .figma_link {
+main .project .project_links .figma_link {
     position: relative;
 }
 
-main #project .project_links .figma_link .device_menu {
+main .project .project_links .figma_link .device_menu {
     position: absolute; left: 22%; top: 100%; 
     display: flex;
     gap: 20px;
@@ -339,11 +370,11 @@ main #project .project_links .figma_link .device_menu {
     visibility: hidden;
     transition: opacity 0.3s ease;
 }
-main #project .project_links .figma_link:hover .device_menu {
+main .project .project_links .figma_link:hover .device_menu {
     opacity: 1;
     visibility: visible;
 }
-main #project .project_links .device_menu a {
+main .project .project_links .device_menu a {
     width: auto; height: auto;
     padding: 0 0 6px;
     border: 0;
@@ -352,7 +383,7 @@ main #project .project_links .device_menu a {
     font-size: 0.875rem;
     position: relative;
 }
-main #project .project_links .device_menu a::after {
+main .project .project_links .device_menu a::after {
     content: '';
     position: absolute;
     left: 0; bottom: 0;
@@ -362,19 +393,22 @@ main #project .project_links .device_menu a::after {
     transform: scaleX(0);
     transition: transform 0.25s ease;
 }
-main #project .project_links .device_menu a:hover {
+main .project .project_links .device_menu a:hover {
     background-color: transparent;
     color: #fff;
 }
-main #project .project_links .device_menu a:hover::after {
+main .project .project_links .device_menu a:hover::after {
     transform: scaleX(1);
 }
-
+/* ======================================================= 프로젝트 2번째 */
+main .project .project_item.reverse .project_contents {
+    flex-direction: row-reverse;
+}
 /* ===================================================아카이브 시작 */
 main #archive {
     width: 100%;
-    min-height: 100vh;
-    padding: 60px 60px 100px;
+    height: 100vh;
+    padding: 100px 60px 0 60px;
     position: relative;
 }
 main #archive .archive_title {
@@ -382,15 +416,13 @@ main #archive .archive_title {
 }
 main #archive .archive_title p {
     font-family: var(--font-point);
-}
-main #archive .archive_title p span {
     position: relative;
 }
-main #archive .archive_title p span::after {/* 포인트점 */
+main #archive .archive_title p::after {/* 포인트점 */
     content: ''; display: inline-block;
     width: 7px; height: 7px;
     background-color: var(--color-point);
-    position: absolute; top: 6px; 
+    position: absolute; top: 10px; 
     margin-left: 3px;
 }
 /* Graphic / Video 각각의 영역 */
@@ -405,9 +437,11 @@ main #archive .archive_category h2 {
 /* Click Image */
 main #archive .archive_notice {
     font-family: var(--font-point);
-    font-size: 0.75rem;
     text-align: right;
-    margin-bottom: 12px;
+    margin-bottom: 30px;
+}
+main #archive .archive_notice span {
+    color: var(--color-point);
 }
 /* Swiper */
 main #archive .archive_swiper {
@@ -431,7 +465,7 @@ main #archive .graphic_swiper .swiper-slide img {
 main #archive .graphic_scrollbar {
     width: 310px;
     height: 1px;
-    margin: 80px auto 0;
+    margin: 130px auto 0;
     background-color: #ffffff63;
     left: 50%; top: 670px;
     transform: translateX(-50%);
@@ -441,27 +475,239 @@ main #archive .graphic_scrollbar  .swiper-scrollbar-drag {
     background-color: var(--color-point);
 }
 /* ================================ 그래픽팝업 */
-
-/* ================================= 비디오 */
-main #archive .video_swiper .swiper-slide {
-    height: 400px;
+/* ================= 그래픽 썸네일 */
+main #archive .graphic_swiper .swiper-slide {
+    height: 500px;
     overflow: hidden;
     cursor: pointer;
 }
-main #archive .video_swiper .swiper-slide video {
+main #archive .graphic_swiper .swiper-slide img {
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: filter 0.3s ease;
 }
-/* 비디오 스크롤바 */
-main #archive .video_scrollbar {
-    width: 310px;
-    height: 2px;
-    margin: 80px auto 0;
-    background-color: #ffffff63;
+@media (hover: hover) {
+    main #archive .graphic_swiper .swiper-slide:hover img {
+        filter: brightness(0.6);
+    }
 }
-main #archive .video_scrollbar .swiper-scrollbar-drag {
-    height: 100%;
+
+/* ================================ 그래픽팝업 */
+.archive_popup {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.archive_popup.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.archive_popup .popup_inner {
+    width: 1000px;
+    max-width: 90%;
+}
+.archive_popup .popup_close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 3rem;
+    line-height: 1;
+    color: #fff;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+.archive_popup .popup_content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* 왼쪽 이미지*/
+.archive_popup .popup_image {
+    flex: 0 0 50%;
+    max-height: 85vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-point) rgba(255, 255, 255, 0.15);
+}
+.archive_popup .popup_image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.archive_popup .popup_image::-webkit-scrollbar {
+    width: 4px;
+}
+.archive_popup .popup_image::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.15);
+}
+.archive_popup .popup_image::-webkit-scrollbar-thumb {
+    background: var(--color-point);
+}
+
+/* 오른쪽 설명 */
+.archive_popup .popup_info {
+    flex: 1;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+.archive_popup .popup_info h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.archive_popup .popup_info p {
+    white-space: pre-line;   /* JS 설명의 \n 줄바꿈 적용 */
+    line-height: 150%;
+    font-weight: 200;
+}
+
+/* ================================= 비디오 */
+main #video {
+    width: 100%;
+    height: 100vh;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+}
+main #video .video_title {
+    margin-bottom: 40px;
+}
+main #video .video_title p {
+    font-family: var(--font-point);
+}
+main #video .video_title p span {
+    position: relative;
+}
+main #video .video_title p span::after { /* 포인트 점 */
+    content: ''; display: inline-block;
+    width: 7px; height: 7px;
     background-color: var(--color-point);
+    position: absolute; top: 10px;
+    margin-left: 3px;
+}
+main #video .video_list {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+main #video .video_item {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+/* 왼쪽 설명 */
+main #video .video_info {
+    width: 30%;
+    flex-shrink: 0;
+}
+main #video .video_info .video_num {
+    font-family: var(--font-point);
+    color: var(--color-point);
+    margin-bottom: 20px;
+}
+main #video .video_info h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+main #video .video_info .video_desc {
+    line-height: 150%;
+    font-weight: 200;
+}
+/* 오른쪽 썸네일 (a 태그) */
+main #video .video_player {
+    flex: 1;
+    height: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+main #video .video_player img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s ease;
+}
+main #video .video_player::after {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 0; height: 0;
+    transform: translate(-40%, -50%);
+    border-style: solid;
+    border-width: 20px 0 20px 32px;
+    border-color: transparent transparent transparent #fff;
+    opacity: 0.8;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+@media (hover: hover) {
+    main #video .video_player:hover img {
+        filter: brightness(0.6);
+    }
+    main #video .video_player:hover::after {
+        opacity: 1;
+    }
+}
+/* ================================ 영상 팝업 */
+.video_popup {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.video_popup.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.video_popup iframe {
+    width: min(90vw, calc(85vh * 16 / 9));/* 비율유지 */
+    aspect-ratio: 16 / 9;
+    border: 0;
+    display: block;
+    background: #000;
+}
+.video_popup .video_popup_close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 3rem;
+    line-height: 1;
+    color: #fff;
+    background: none;
+    border: 0;
+    cursor: pointer;
 }
