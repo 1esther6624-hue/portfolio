@@ -222,9 +222,12 @@ main #resume #resume_contents #resume_left3 .skills {
 main #resume #resume_contents #resume_left3 .skills .skills_content {
     gap: 25px;  
 }
+main #resume #resume_contents #resume_left3 .skills .skills_content {
+    display: flex; flex-flow: row;
+    gap: 50px;
+}
 main #resume #resume_contents #resume_left3 .skills .skills_top {
-    display: flex;
-    gap: 80px;
+    display: contents;
 }
 main #resume #resume_contents #resume_left3 .skills .skill_group {}
 main #resume #resume_contents #resume_left3 .skills .skill_title {
@@ -236,6 +239,25 @@ main #resume #resume_contents #resume_left3 .skills .skill_icon {
 }
 main #resume #resume_contents #resume_left3 .skills .skill_icon img {
     width: 50px; height: 50px; 
+}
+main #resume #resume_photo {
+    width: 400px; display: flex; flex-flow: column; justify-content: center;
+    align-items: center; gap: 30px;
+}
+main #resume #resume_photo p img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.profile_tags {
+  display: flex;
+  gap: 20px;
+}
+.profile_tags span {
+  padding: 10px 20px;
+  border: 1px solid #6CFFB5;
+  color: #fff;
+  font-size: 14px;
 }
 /* ========================================================== 목차 */
 main #menu {
@@ -266,8 +288,11 @@ main #menu .menu_bg {
 }
 main #menu .menu_bg01 { background-image: url('../images/menu01.jpg'); }
 main #menu .menu_bg02 { background-image: url('../images/menu02.jpg'); }
-main #menu .menu_bg03 { background-image: url('../images/menu03.jpg'); }
-main #menu .menu_bg04 { background-image: url('../images/g1.jpg'); }
+main #menu .menu_bg03 {
+    background-image: url('../images/menu03.jpg');
+    background-position: 70%;
+}
+main #menu .menu_bg04 { background-image: url('../images/menu04.png'); }
 
 @media (hover: hover) {
     main #menu .menu_item:hover .menu_bg {
