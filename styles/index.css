@@ -17,11 +17,14 @@ header nav ul {
     gap: 30px;
     margin: 0 60px;
 }
-header nav ul li {}
 header nav ul li a {
     font-family: var(--font-point);
     font-size: var(--font-size-sm);
-    font-weight: 100;   
+    font-weight: 100;
+    transition: 0.5s;
+}
+header nav ul li:hover a {
+    color: var(--color-point);
 }
 
 /* ========================================== main */
@@ -225,7 +228,7 @@ main #resume #resume_contents #resume_left3 .skills .skills_top {
 }
 main #resume #resume_contents #resume_left3 .skills .skill_group {}
 main #resume #resume_contents #resume_left3 .skills .skill_title {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 main #resume #resume_contents #resume_left3 .skills .skill_icon {
     display: flex;
@@ -233,6 +236,87 @@ main #resume #resume_contents #resume_left3 .skills .skill_icon {
 }
 main #resume #resume_contents #resume_left3 .skills .skill_icon img {
     width: 50px; height: 50px; 
+}
+/* ========================================================== 목차 */
+main #menu {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+main #menu .menu_item {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14vh 50px 80px;
+}
+main #menu .menu_item + .menu_item {
+    border-left: 1px solid #a1a1a1;
+}
+main #menu .menu_bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.35);
+    transform: scale(1.05);
+    transition: filter 0.5s ease, transform 0.8s ease;
+}
+main #menu .menu_bg01 { background-image: url('../images/menu01.jpg'); }
+main #menu .menu_bg02 { background-image: url('../images/menu02.jpg'); }
+main #menu .menu_bg03 { background-image: url('../images/menu03.jpg'); }
+main #menu .menu_bg04 { background-image: url('../images/g1.jpg'); }
+
+@media (hover: hover) {
+    main #menu .menu_item:hover .menu_bg {
+        filter: brightness(1);
+        transform: scale(1);
+    }
+}
+
+/* 큰 번호 */
+main #menu .menu_num,
+main #menu .menu_bottom {
+    position: relative;
+    z-index: 1;
+}
+main #menu .menu_num {
+    display: flex;
+    align-items: flex-end;
+}
+main #menu .menu_num .num {
+    font-family: var(--font-point);
+    font-size: clamp(5rem, 9vw, 10rem);
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.25);
+}
+main #menu .menu_label {
+    font-family: var(--font-point);
+    font-size: 1.3rem;
+    margin: 0 0 12px 30px;
+}
+
+/* 설명 */
+main #menu .menu_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-bottom: 35px;
+}
+main #menu .menu_tags span {
+    background-color: var(--color-point);
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 2px 12px;
+}
+main #menu .menu_name {
+    display: flex; flex-flow: column;
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 130%;
 }
 /* ==================================================== 프로젝트 시작 */
 main .project {
@@ -254,6 +338,8 @@ main .project .project_bg {
     top: 0;
     background-size: cover;
     background-position: center;
+}
+main .project .project_innisfree {
     background-image: url('../images/project1_bg.png');
 }
 main .project .project_innisfree {
@@ -320,7 +406,12 @@ main .project .project_contents .project_info .project_desc {
 }
 
 /* 오른쪽 프로젝트 이미지 */
-
+.project_contents .project_image {
+    padding-left: 140px;
+}
+.project_contents .project_image img {
+    width: 100%;
+}
 
 /* 버튼 */
 main .project .project_links {
@@ -403,6 +494,13 @@ main .project .project_links .device_menu a:hover::after {
 /* ======================================================= 프로젝트 2번째 */
 main .project .project_item.reverse .project_contents {
     flex-direction: row-reverse;
+}
+main .project .project_converse {
+    background-image: url('../images/project2_bg.png');
+}
+.project_item.reverse .project_image {
+    padding-left: 0;
+    padding-right: 140px;
 }
 /* ===================================================아카이브 시작 */
 main #archive {
@@ -586,28 +684,30 @@ main #video {
     display: flex;
     flex-direction: column;
 }
-main #video .video_title {
-    margin-bottom: 40px;
+main #video .archive_title {
+    margin: 30px 0;
 }
-main #video .video_title p {
+main #video .archive_title p {
     font-family: var(--font-point);
-}
-main #video .video_title p span {
     position: relative;
 }
-main #video .video_title p span::after { /* 포인트 점 */
+main #video .archive_title p::after {/* 포인트점 */
     content: ''; display: inline-block;
     width: 7px; height: 7px;
     background-color: var(--color-point);
-    position: absolute; top: 10px;
+    position: absolute; top: 10px; 
     margin-left: 3px;
+}
+main #video .video_list h2 {
+    font-size: 1rem;
+    font-weight: 400;
 }
 main #video .video_list {
     flex: 1;
     min-height: 0;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
 }
 main #video .video_item {
     flex: 1;

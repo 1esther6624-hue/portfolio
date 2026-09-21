@@ -15,6 +15,20 @@ const mainSlide = new Swiper('.main-slide', {
     }
 });
 
+// 메인메뉴
+document.querySelectorAll('header nav a').forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const target = document.querySelector(link.getAttribute('href'));
+        const index = Array.from(mainSlide.slides).indexOf(target);
+
+        if (index > -1) {
+            mainSlide.slideTo(index, 800);
+        }
+    });
+});
+
 /* Resume 애니메이션 */
 function chkResumeFunc(swiper) {
     if (swiper.activeIndex === 1) {
@@ -120,32 +134,29 @@ const archiveSwiper = new Swiper('.graphic_swiper', {
 
 /* ================= 영상 팝업 */
 const videoPopup      = document.querySelector('.video_popup');
-const videoPopupPlayer = videoPopup.querySelector('video');
+const videoPopupFrame = videoPopup.querySelector('iframe');
 const videoPopupClose = videoPopup.querySelector('.video_popup_close');
 
-function openVideoPopup(src) {
-    videoPopupPlayer.src = src;
-    videoPopupPlayer.muted = false;
+function openVideoPopup(url) {
+    const id = new URL(url).searchParams.get('v');
+    videoPopupFrame.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
     videoPopup.classList.add('active');
-    videoPopupPlayer.play();
 }
 
 function closeVideoPopup() {
     videoPopup.classList.remove('active');
-    videoPopupPlayer.pause();
-    videoPopupPlayer.removeAttribute('src');
-    videoPopupPlayer.load();
+    videoPopupFrame.src = '';
 }
 
 // 썸네일 클릭
 document.querySelector('#video .video_list').addEventListener('click', (e) => {
     const player = e.target.closest('.video_player');
     if (!player) return;
-    const video = player.querySelector('video');
-    openVideoPopup(video.getAttribute('src'));
+    e.preventDefault();/* 유튜브이동 x */
+    openVideoPopup(player.href);
 });
 
-// 닫기: X 버튼
+// 닫기
 videoPopupClose.addEventListener('click', closeVideoPopup);
 videoPopup.addEventListener('click', (e) => {
     if (e.target === videoPopup) closeVideoPopup();
