@@ -250,14 +250,14 @@ main #resume #resume_photo p img {
     display: block;
 }
 .profile_tags {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 .profile_tags span {
-  padding: 10px 20px;
-  border: 1px solid #6CFFB5;
-  color: #fff;
-  font-size: 14px;
+    padding: 10px 20px;
+    border: 1px solid #6CFFB5;
+    color: #fff;
+    font-size: 14px;
 }
 /* ========================================================== 목차 */
 main #menu {
@@ -317,11 +317,6 @@ main #menu .menu_num .num {
     line-height: 1;
     color: rgba(255, 255, 255, 0.25);
 }
-main #menu .menu_label {
-    font-family: var(--font-point);
-    font-size: 1.3rem;
-    margin: 0 0 12px 30px;
-}
 
 /* 설명 */
 main #menu .menu_tags {
@@ -340,7 +335,7 @@ main #menu .menu_tags span {
 main #menu .menu_name {
     display: flex; flex-flow: column;
     font-size: 1.7rem;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 130%;
 }
 /* ==================================================== 프로젝트 시작 */
