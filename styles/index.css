@@ -831,3 +831,55 @@ main #video .video_player::after {
     border: 0;
     cursor: pointer;
 }
+/* ================================================ 화면 (1300px) */
+@media (max-width: 1300px) {
+
+    /* Resume */
+    main #resume {
+        padding: 0 40px;
+    }
+    main #resume #resume_contents {
+        gap: 50px;
+    }
+    main #resume #resume_contents #resume_left2 .profile,
+    main #resume #resume_contents #resume_left2 .education,
+    main #resume #resume_contents #resume_left3 .contact,
+    main #resume #resume_contents #resume_left3 .skills {
+        width: 400px;
+    }
+    main #resume #resume_photo {
+        width: 300px;
+    }
+    /* Project */
+    main .project .project_contents {
+        padding: 40px;
+    }
+    main .project .project_info {
+        width: 500px;
+    }
+    main .project .project_info .project_desc {
+        width: 500px;
+    }
+    main .project .project_links {
+        width: 500px;
+    }
+    .project_contents .project_image {
+        padding-left: 80px;
+    }
+    .project_item.reverse .project_image {
+        padding-right: 80px;
+    }
+    /* Archive */
+    main #archive {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /* Video */
+    main #video {
+        padding: 40px;
+    }
+    main #video .video_item {
+        gap: 40px;
+    }
+}
