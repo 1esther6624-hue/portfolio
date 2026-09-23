@@ -208,10 +208,16 @@ main #resume #resume_contents #resume_left3 .contact .contact_content a:hover::a
 main #resume #resume_contents #resume_left3 .contact .contact_content > div {
     display: flex;
 }
-main #resume #resume_contents #resume_left3 .contact .contact_content dd {}
+main #resume #resume_contents #resume_left3 .contact .contact_content dd {
+    white-space: normal;
+    flex: 1;
+    min-width: 0;
+    line-height: 140%;
+}
 main #resume #resume_contents #resume_left3 .contact .contact_content dt {
     width: 90px;
     font-weight: 200;
+    flex-shrink: 0;
 }
 
 /* Skills */
@@ -220,10 +226,8 @@ main #resume #resume_contents #resume_left3 .skills {
     width: 500px;
 }
 main #resume #resume_contents #resume_left3 .skills .skills_content {
-    gap: 25px;  
-}
-main #resume #resume_contents #resume_left3 .skills .skills_content {
-    display: flex; flex-flow: row;
+    display: flex;
+    flex-flow: row;
     gap: 50px;
 }
 main #resume #resume_contents #resume_left3 .skills .skills_top {
@@ -376,7 +380,7 @@ main .project .project_contents {
 
 /* 왼쪽 프로젝트 정보 */
 main .project .project_info {
-    width: 600px;
+    width: clamp(400px, 40vw, 600px);
 }
 main .project .project_info .project_category {
     font-family: var(--font-point);
@@ -516,6 +520,14 @@ main .project .project_item.reverse .project_contents {
     flex-direction: row-reverse;
 }
 main .project .project_converse {
+    background-image: url('../images/project2_bg.png');
+}
+.project_item.reverse .project_image {
+    padding-left: 0;
+    padding-right: 140px;
+}
+/* ======================================================= 프로젝트 3번째 */
+main .project .project_lego {
     background-image: url('../images/project2_bg.png');
 }
 .project_item.reverse .project_image {
@@ -814,7 +826,7 @@ main #video .video_player::after {
     pointer-events: auto;
 }
 .video_popup iframe {
-    width: min(90vw, calc(85vh * 16 / 9));/* 비율유지 */
+    width: min(90vw, calc(85vh * 16 / 9));
     aspect-ratio: 16 / 9;
     border: 0;
     display: block;
@@ -830,6 +842,143 @@ main #video .video_player::after {
     background: none;
     border: 0;
     cursor: pointer;
+}
+/* ========================= 마무리 */
+main #contact {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main #contact .contact_title {
+    padding-bottom: 100px;
+}
+main #contact .contact_title img {
+    width: 80%;
+    position: relative;
+}
+main #contact .contact_info {
+    width: min(100%, 700px);
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+main #contact .contact_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+main #contact .contact_name_row {
+    justify-content: flex-start;
+    gap: 15px;
+}
+main #contact .contact_name {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+main #contact .contact_name span {
+    font-weight: 300;
+    margin-left: 10px;
+}
+main #contact .contact_label {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+main #contact .contact_value {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+main #contact .contact_thanks {
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 100%;
+    text-align: right;
+}
+main #contact .copyright {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: right;
+}
+
+/* ===== 반응형 처리 ===== */
+
+/* Hero 폰트 */
+main #hero .hero_title .name span {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+/* Resume 왼쪽너비 */
+main #resume #resume_contents #resume_left2 .profile,
+main #resume #resume_contents #resume_left2 .education,
+main #resume #resume_contents #resume_left3 .contact,
+main #resume #resume_contents #resume_left3 .skills {
+    width: clamp(350px, 35vw, 500px);
+}
+
+/* Project 정보 영역 너비 */
+main .project .project_info {
+    width: clamp(400px, 40vw, 600px);
+}
+main .project .project_contents .project_info .project_desc {
+    width: clamp(400px, 40vw, 600px);
+}
+main .project .project_links {
+    width: clamp(400px, 40vw, 600px);
+}
+main .project .project_info .project_title h2 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
+/* ===================== 화면 (1600px) 중간 단계 ===================== */
+@media (max-width: 1600px) {
+    main .project .project_contents {
+        padding: 50px;
+    }
+    main #resume #resume_contents #resume_left3 .skills .skills_content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    main #resume #resume_contents #resume_left3 .skills .skills_top {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+    .project_contents .project_image {
+        padding-left: 100px;
+    }
+    .project_item.reverse .project_image {
+        padding-right: 100px;
+    }
+    main #resume {
+        padding: 0 50px;
+    }
+    main #resume #resume_photo {
+        width: 300px;
+    }
+    main #archive {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    main #video {
+        padding: 50px;
+    }
+    .profile_tags {
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+    .profile_tags span {
+        flex: 1 1 auto;
+        min-width: 0;
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        text-align: center;
+    }
 }
 /* ================================================ 화면 (1300px) */
 @media (max-width: 1300px) {
@@ -848,7 +997,7 @@ main #video .video_player::after {
         width: 400px;
     }
     main #resume #resume_photo {
-        width: 300px;
+        width: 250px;
     }
     /* Project */
     main .project .project_contents {
@@ -881,5 +1030,45 @@ main #video .video_player::after {
     }
     main #video .video_item {
         gap: 40px;
+    }
+
+    /* 폰트 */
+    main #resume #resume_contents #resume_left2 .education .education_content dt,
+    main #resume #resume_contents #resume_left2 .education .education_content dd {
+        font-size: 0.9rem;
+    }
+    main #resume #resume_contents #resume_left3 .contact .contact_content dt,
+    main #resume #resume_contents #resume_left3 .contact .contact_content dd {
+        font-size: 0.9rem;
+    }
+    main #resume #resume_contents #resume_left3 .skills .skill_title {
+        font-size: 0.85rem;
+    }
+    main #resume #resume_contents #resume_left3 .skills .skill_icon img {
+        width: 34px;
+        height: 34px;
+    }
+    main .project .project_info .project_category {
+        font-size: 0.85rem;
+    }
+    main .project .project_info .project_title h2 {
+        font-size: 2.4rem;
+    }
+    main .project .project_info .project_title p {
+        font-size: 1.2rem;
+    }
+    main .project .project_contents .project_info .project_detail dt,
+    main .project .project_contents .project_info .project_detail dd {
+        font-size: 0.85rem;
+    }
+    main .project .project_contents .project_info .project_desc {
+        font-size: 0.85rem;
+    }
+    main .project .project_links a {
+        font-size: 0.8rem;
+    }
+    main .project .project_links a img {
+        width: 30px;
+        height: 30px;
     }
 }
