@@ -526,6 +526,21 @@ main .project .project_converse {
     padding-left: 0;
     padding-right: 140px;
 }
+/* 프로젝트 2, 3 버튼 배치 */
+main #project2 .project_links,
+main #project3 .project_links {
+    display: flex;
+    flex-wrap: wrap;
+}
+main #project2 .project_links > *,
+main #project3 .project_links > * {
+    flex: 0 0 calc((100% - 20px) / 2);
+}
+/* 마지막 버튼은 한 줄 전체 */
+main #project2 .project_links > :last-child,
+main #project3 .project_links > :last-child {
+    flex-basis: 100%;
+}
 /* ======================================================= 프로젝트 3번째 */
 main .project .project_lego {
     background-image:
