@@ -184,15 +184,37 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && videoPopup.classList.contains('active')) closeVideoPopup();
 });
 
+
 // 마우스
-const cursor = document.querySelector('.cursor');
+const cursorDot = document.querySelector('.cursor_dot');
+const cursorRing = document.querySelector('.cursor_ring');
+let mouseX = 0, mouseY = 0;  // 실제 마우스 위치
+let ringX = 0, ringY = 0;    // 링이 그려지는 위치
 
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    // 점은 바로 따라감
+    cursorDot.style.left = mouseX + 'px';
+    cursorDot.style.top = mouseY + 'px';
 });
 
+function followRing() {
+    ringX += (mouseX - ringX) * 0.15;  // 작을수록 더 느리게 따라옴
+    ringY += (mouseY - ringY) * 0.15;
+    cursorRing.style.left = ringX + 'px';
+    cursorRing.style.top = ringY + 'px';
+    requestAnimationFrame(followRing);
+}
+followRing();
+
 document.querySelectorAll('a, button, .project_lego').forEach((el) => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('active'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+    el.addEventListener('mouseenter', () => {
+        cursorRing.classList.add('active');
+        cursorDot.classList.add('active');
+    });
+    el.addEventListener('mouseleave', () => {
+        cursorRing.classList.remove('active');
+        cursorDot.classList.remove('active');
+    });
 });
