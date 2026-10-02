@@ -1090,7 +1090,6 @@ main .project .project_info .project_title h2 {
     }
 }
 /* 마우스 */
-/* 마우스 */
 body {
     cursor: none;
 }
@@ -1099,10 +1098,10 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    pointer-events: none;      /* 클릭이 커서에 막히지 않게 */
+    pointer-events: none;/* 마우스커서에 클릭이 안먹히는거없게 */
     transform: translate(-50%, -50%);
     z-index: 9999;
-    mix-blend-mode: difference; /* 밝은/어두운 배경 어디서든 보이게 */
+    mix-blend-mode: difference; /* 밝은배경어두운배경 다보이게 */
 }
 /* 가운데 점: 마우스를 바로 따라감 */
 .cursor_dot {
